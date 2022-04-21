@@ -15,7 +15,7 @@
 
 <body id="page-top">
     <div id="wrapper">
-        <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0">
+        <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0  toggled">
             <div class="container-fluid d-flex flex-column p-0">
                 <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="{% url 'students:dashboard' %}">
                     <div class="sidebar-brand-icon"><i class="fas fa-users"></i></div>
@@ -79,7 +79,7 @@
                                     <div class="dropdown-menu shadow dropdown-menu-right animated--grow-in">
                                         <a class="dropdown-item" href="{% url 'students:dashboard' %}"><i
                                                 class="fas fa-inbox fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Dashboard</a>
-                                                <a class="dropdown-item" href="{% url 'students:join_classroom' %}"><i
+                                        <a class="dropdown-item" href="{% url 'students:join_classroom' %}"><i
                                                 class="fas fa-warehouse fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Join
                                             Classroom</a>
                                         <div class="dropdown-divider"></div>
@@ -92,9 +92,7 @@
                     </div>
                 </nav>
                 <!-- START CONTENT BLOCK -->
-                {% block content %}
-
-                {% endblock content %}
+                {% block content %} {% endblock content %}
                 <!-- END CONTENT BLOCK -->
             </div>
             <footer class="bg-white sticky-footer">
